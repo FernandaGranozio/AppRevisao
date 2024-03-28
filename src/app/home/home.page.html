@@ -1,20 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Revisão
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-item>
+    <ion-input [(ngModel)]="n1" label="Primeiro Numero" labelPlacement="floating" placeholder="Digite o primeiro valor"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)]="n2" label="Segundo Numero" labelPlacement="floating" placeholder="Digite o segundo valor"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="somar()">Somar</ion-button>
+  <ion-button expand="full" (click)="subtrair()">Subtrair</ion-button>
+  <ion-button expand="full" (click)="multiplicar()">Multiplicar</ion-button>
+  <ion-button expand="full" (click)="dividir()">Dividir</ion-button>
+
+  <ion-label>O resultado é: {{nfinal}} </ion-label>
+
 </ion-content>
